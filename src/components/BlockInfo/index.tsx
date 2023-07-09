@@ -48,7 +48,6 @@ export default function BlockInfo({ blockNumber }: BlockInfoProps) {
       `/api/chainbase/block/detail?chain_id=1&number=${blockNumber}`
     );
     const result = await resp.json();
-    console.log(result);
     setBlockInfo(result.data);
   }, []);
 

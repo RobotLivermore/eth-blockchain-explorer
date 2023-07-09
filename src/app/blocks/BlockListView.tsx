@@ -24,8 +24,6 @@ export default async function BlockListView({
   page,
   blocks,
 }: BlockListViewProps) {
-  console.log(page);
-
   return (
     <div className="w-full flex flex-col items-center justify-center px-6">
       {/* top bar */}

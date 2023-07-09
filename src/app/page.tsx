@@ -3,7 +3,6 @@ import SearchBar from '@/components/SearchBar';
 import { getRecentBlocks } from '@/server/getRecentBlocks';
 import { getRecentTxs } from '@/server/getRecentTxs';
 import Image from 'next/image';
-import { Fragment } from 'react';
 
 const DATA_LIST_BLOCK_CLS =
   'bg-white border border-[#DEE4E9] rounded-[16px] px-6';
@@ -11,7 +10,6 @@ const DATA_LIST_BLOCK_CLS =
 export default async function Home() {
   const blocks = await getRecentBlocks();
   const txs = await getRecentTxs();
-  console.log(txs);
   return (
     <div className="w-full flex flex-col items-center justify-center">
       {/* hero content */}
