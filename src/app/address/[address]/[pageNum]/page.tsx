@@ -6,10 +6,13 @@ import BigNumber from 'bignumber.js';
 export default async function AccountDetail({
   params,
 }: {
-  params: { address: string };
+  params: { address: string; pageNum: string };
 }) {
   if (Number(params.address) >= 0) {
-    const result = await getTxsByAddress(params.address, 1);
+    const result = await getTxsByAddress(
+      params.address,
+      Number(params.pageNum)
+    );
     return (
       <div className="w-full max-w-[1244px] flex flex-col items-center justify-center px-6">
         <HeaderBar />

@@ -1,5 +1,8 @@
 {
   "editor.tabSize": 2,
   "svg.preview.background": "dark-transparent",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

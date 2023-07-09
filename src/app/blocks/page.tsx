@@ -1,9 +1,7 @@
+import BlockListView from './BlockListView';
+import { getBlocksByPage } from '@/server/getBlocksByPage';
 
-import BlockListView from './BlockListView'
-
-
-export default function Blocks() {
-  return (
-    <BlockListView />
-  )
+export default async function Blocks() {
+  const blocks = await getBlocksByPage();
+  return <BlockListView blocks={blocks} />;
 }
